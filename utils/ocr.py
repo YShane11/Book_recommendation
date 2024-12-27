@@ -35,7 +35,7 @@ class OCR:
     def scan(self, filepath):
         image = Image.open(filepath)
         
-        image = self.adaptive_enhance(image).convert('L')
+        image = self.adaptive_enhance(image.convert('L'))
         
         # image = image.point(lambda x: 0 if x < 150 else 255, '1')
         
